@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.ioncannon.cpuburn.gpugflops"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 23124
+        versionName "2.31.24"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:design:26.0.0-alpha1'
+    implementation 'com.android.support:support-v4:26.0.0-alpha1'
+    implementation 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    implementation 'com.github.lecho:hellocharts-library:1.5.8'
+}

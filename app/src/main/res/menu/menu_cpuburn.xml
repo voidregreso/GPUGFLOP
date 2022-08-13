@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_settings" android:orderInCategory="101" android:title="@string/action_settings"/>
+    <item android:id="@+id/miKryoLittle" android:orderInCategory="101" android:title="@string/kryoL" app:showAsAction="never"/>
+    <item android:id="@+id/miKryoBig" android:orderInCategory="101" android:title="@string/kryoB" app:showAsAction="never"/>
+    <item android:id="@+id/miGPU" android:orderInCategory="101" android:title="@string/Migpu" app:showAsAction="never"/>
+    <item android:id="@+id/blackTheme" android:orderInCategory="101" android:title="@string/blkmode" app:showAsAction="never"/>
+    <item android:id="@+id/Export" android:orderInCategory="102" android:title="Export"/>
+</menu>

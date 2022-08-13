@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="Migpu">GPU DVFS(S820)</string>
+    <string name="action_settings">Version 1.50</string>
+    <string name="app_name">GPU GFLOPS</string>
+    <string name="blkmode">Black/White Theme</string>
+    <string name="character_counter_pattern">%1$d / %2$d</string>
+    <string name="kryoB">Kryo Big DVFS(S820)</string>
+    <string name="kryoL">Kryo Little DVFS(S820)</string>
+</resources>

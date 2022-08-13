@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@+id/main_content" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@+id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll" android:layout_width="fill_parent" android:layout_height="70.0dip" />
+        <TextView android:layout_gravity="end" android:id="@+id/textViewInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:layout_gravity="end" android:id="@+id/textViewGFLOPS" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:layout_gravity="end" android:id="@+id/textViewCPU" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <lecho.lib.hellocharts.view.LineChartView android:id="@+id/chartResultDebug" android:layout_width="fill_parent" android:layout_height="90.0dip" />
+        <TextView android:layout_gravity="end" android:id="@+id/textViewPower" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <lecho.lib.hellocharts.view.LineChartView android:id="@+id/chartPower" android:layout_width="fill_parent" android:layout_height="90.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <CheckBox android:textSize="12.0dip" android:id="@+id/checkBoxShowPower" android:layout_width="125.0dip" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:checked="false" android:text="Show Power" android:singleLine="false" android:onClick="updateCK" />
+                <CheckBox android:textSize="12.0dip" android:id="@+id/checkBox3" android:layout_width="125.0dip" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="New CheckBox" android:onClick="updateCK" />
+                <CheckBox android:textSize="12.0dip" android:id="@+id/checkBox6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="New CheckBox" android:onClick="updateCK" />
+                <Button android:id="@+id/buttonSetSensor" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="Seleccione la temperatura a leer" android:onClick="doSetSensor" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <CheckBox android:textSize="12.0dip" android:id="@+id/checkBox1" android:layout_width="125.0dip" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:checked="false" android:text="New CheckBox" android:onClick="updateCK" />
+                <CheckBox android:textSize="12.0dip" android:id="@+id/checkBox4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="New CheckBox" android:onClick="updateCK" />
+                <CheckBox android:textSize="12.0dip" android:id="@+id/checkBox7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="New CheckBox" android:onClick="updateCK" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <CheckBox android:textSize="12.0dip" android:id="@+id/checkBox2" android:layout_width="125.0dip" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="New CheckBox" android:onClick="updateCK" />
+                <CheckBox android:textSize="12.0dip" android:id="@+id/checkBox5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="New CheckBox" android:onClick="updateCK" />
+                <CheckBox android:textSize="12.0dip" android:id="@+id/checkBox8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="New CheckBox" android:onClick="updateCK" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="12.0dip" android:id="@+id/buttonCPUMode" android:layout_width="130.0dip" android:layout_height="40.0dip" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="CPU Mode" android:layout_weight="1.0" android:onClick="doSetCPUMode" style="?android:attr/buttonStyleSmall" />
+            <Button android:textSize="12.0dip" android:id="@+id/buttonThread" android:layout_width="130.0dip" android:layout_height="40.0dip" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="Threads" android:layout_weight="1.0" android:onClick="doSetThread" style="?android:attr/buttonStyleSmall" />
+            <Button android:textSize="12.0dip" android:id="@+id/buttonSize" android:layout_width="130.0dip" android:layout_height="40.0dip" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="Tamaño de los datos" android:layout_weight="1.0" android:onClick="doSetDataset" style="?android:attr/buttonStyleSmall" />
+            <Button android:textSize="12.0dip" android:id="@+id/buttonCore" android:layout_width="130.0dip" android:layout_height="40.0dip" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="A qué núcleos dirigirse" android:layout_weight="1.0" android:onClick="doSetCore" style="?android:attr/buttonStyleSmall" />
+            <Button android:textSize="12.0dip" android:id="@+id/buttonIntv" android:layout_width="130.0dip" android:layout_height="40.0dip" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="Intervalo de muestreo" android:layout_weight="1.0" android:onClick="doSetIntv" style="?android:attr/buttonStyleSmall" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@+id/textViewBurnInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Info" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <CheckBox android:id="@+id/checkBoxGPU" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:checked="false" android:text="Estrés GPU" />
+            <CheckBox android:id="@+id/checkBoxScale" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:checked="false" android:text="Estrés GPU Scalar" android:layout_weight="1.0" />
+            <RadioGroup android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checkedButton="@+id/radioButtonHighP" android:layout_weight="2.94">
+                <RadioButton android:id="@+id/radioButtonHighP" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:checked="true" android:text="FP32" android:layout_weight="1.0" />
+                <RadioButton android:id="@+id/radioButtonMediumP" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:layout_marginBottom="-5.0dip" android:text="FP16" android:layout_weight="1.0" />
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/buttonStart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:text="Start" android:layout_weight="1.0" android:onClick="burnStart" />
+            <Button android:id="@+id/buttonStop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:text="STOP" android:layout_weight="1.0" android:onClick="burnStop" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
